@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>عبدالرحمن ناصر للتصميم</title>
   <!-- Favicon Logo -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15 L85 85 L65 85 L50 45 L35 85 L15 85 Z' fill='%23e5a93b'/></svg>">
+  <link rel="icon" type="image/png" href="favicon.png.png">
+  
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@300;400;500;700;900&display=swap"
@@ -125,7 +125,6 @@
       transform: scale(1.01);
     }
 
-    /* Emoji Animation */
     @keyframes jumpAndWave {
 
       0%,
@@ -163,10 +162,8 @@
       animation: jumpAndWave 2.6s infinite ease-in-out;
       transform-origin: 70% 70%;
       -webkit-text-fill-color: initial;
-      /* Ensures emoji keeps its natural colors or renders correctly with gradients */
     }
 
-    /* Continuous Live Drawing Animation for Letter A */
     @keyframes continuousDraw {
       0% {
         stroke-dashoffset: 450;
@@ -275,7 +272,6 @@
   <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-gold/10">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 group">
-        <!-- Live Drawing Logo A -->
         <div
           class="w-12 h-12 rounded-xl glass flex items-center justify-center p-1.5 shadow-lg logo-float group-hover:scale-110 transition-transform">
           <svg viewBox="0 0 120 120" class="w-full h-full overflow-visible">
@@ -359,14 +355,13 @@
         </div>
       </div>
 
-      <!-- Hero Badge Display with Live Drawing Logo A (Without Outer Box) -->
+      <!-- Hero Badge Display with Live Drawing Logo A -->
       <div class="relative flex flex-col justify-center items-center reveal">
         <div class="absolute w-72 h-72 bg-gold/10 rounded-full blur-3xl -top-10 -right-10 animate-pulse"></div>
         <div class="absolute w-72 h-72 bg-tealAccent/10 rounded-full blur-3xl -bottom-10 -left-10 animate-pulse"></div>
 
         <div
           class="w-40 h-40 rounded-3xl bg-gradient-to-tr from-gold/15 via-tealAccent/15 to-gold/25 border border-gold/40 flex items-center justify-center p-4 relative mb-6 logo-float shadow-xl group-hover:scale-110 transition-transform z-10">
-          <!-- Live Drawing Logo A -->
           <svg viewBox="0 0 120 120" class="w-full h-full overflow-visible">
             <path d="M60 15 L95 95 L78 95 L60 52 L42 95 L25 95 Z" fill="none" stroke="url(#customAGrad)"
               stroke-width="6" stroke-linejoin="round" stroke-linecap="round" class="innovative-a-path" />
