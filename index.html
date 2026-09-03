@@ -2,13 +2,12 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
 
 <head>
-  <meta name="google-site-verification" content="Jzj5XCqkAOLznELwUv9bL3frTzFBAq7ns-Uw6rZ17Tk" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عبدالرحمن AI | مطور واجهات ومصمم هويات بصرية</title>
+  <title>عبدالرحمن ناصر للتصميم</title>
   <!-- Favicon Logo -->
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 10 L60 30 L50 25 L40 30 Z' fill='%23e5a93b'/></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15 L85 85 L65 85 L50 45 L35 85 L15 85 Z' fill='%23e5a93b'/></svg>">
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@300;400;500;700;900&display=swap"
@@ -126,27 +125,73 @@
       transform: scale(1.01);
     }
 
-    /* SVG Drawing Animation */
-    @keyframes drawPath {
+    /* Emoji Animation */
+    @keyframes jumpAndWave {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      15% {
+        transform: translateY(-14px) rotate(-8deg);
+      }
+
+      30% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      45% {
+        transform: translateY(-4px) rotate(18deg);
+      }
+
+      60% {
+        transform: translateY(0) rotate(-12deg);
+      }
+
+      75% {
+        transform: translateY(0) rotate(16deg);
+      }
+
+      90% {
+        transform: translateY(0) rotate(-6deg);
+      }
+    }
+
+    .wave-emoji {
+      display: inline-block;
+      animation: jumpAndWave 2.6s infinite ease-in-out;
+      transform-origin: 70% 70%;
+      -webkit-text-fill-color: initial;
+      /* Ensures emoji keeps its natural colors or renders correctly with gradients */
+    }
+
+    /* Continuous Live Drawing Animation for Letter A */
+    @keyframes continuousDraw {
       0% {
-        stroke-dashoffset: 400;
+        stroke-dashoffset: 450;
         opacity: 0.2;
       }
 
-      50% {
+      45% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+
+      75% {
+        stroke-dashoffset: 0;
         opacity: 1;
       }
 
       100% {
-        stroke-dashoffset: 0;
-        opacity: 1;
+        stroke-dashoffset: -450;
+        opacity: 0.2;
       }
     }
 
-    .animated-logo-path {
-      stroke-dasharray: 400;
-      stroke-dashoffset: 400;
-      animation: drawPath 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+    .innovative-a-path {
+      stroke-dasharray: 450;
+      animation: continuousDraw 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
     .logo-float {
@@ -230,29 +275,25 @@
   <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-gold/10">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 group">
-        <!-- Animated Logo Icon -->
+        <!-- Live Drawing Logo A -->
         <div
-          class="w-11 h-11 rounded-xl glass flex items-center justify-center p-1.5 shadow-lg logo-float group-hover:scale-110 transition-transform">
-          <svg viewBox="0 0 100 100" class="w-full h-full overflow-visible">
+          class="w-12 h-12 rounded-xl glass flex items-center justify-center p-1.5 shadow-lg logo-float group-hover:scale-110 transition-transform">
+          <svg viewBox="0 0 120 120" class="w-full h-full overflow-visible">
             <defs>
-              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="customAGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#f4d06f" />
                 <stop offset="50%" stop-color="#e5a93b" />
                 <stop offset="100%" stop-color="#14b8a6" />
               </linearGradient>
             </defs>
-            <!-- Pen Nib at Top Apex -->
-            <path d="M50 5 L58 22 L50 18 L42 22 Z" fill="url(#logoGrad)" class="animated-logo-path" />
-            <!-- Letter A Left & Right Legs with Pen-like strokes -->
-            <path d="M50 18 L25 78 C24 81, 28 83, 32 80 L46 50 M50 18 L75 78 C76 81, 72 83, 68 80 L54 50" fill="none"
-              stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"
-              class="animated-logo-path" />
-            <!-- Bottom Sweeping Arrow & Leaf curve -->
-            <path d="M33 68 C45 68, 55 60, 68 60 L62 53 M68 60 L62 67" fill="none" stroke="#14b8a6" stroke-width="5"
-              stroke-linecap="round" stroke-linejoin="round" class="animated-logo-path" />
+            <path d="M60 15 L95 95 L78 95 L60 52 L42 95 L25 95 Z" fill="none" stroke="url(#customAGrad)"
+              stroke-width="6" stroke-linejoin="round" stroke-linecap="round" class="innovative-a-path" />
+            <path d="M60 38 L68 55 L60 72 L52 55 Z" fill="url(#customAGrad)" opacity="0.85" />
+            <path d="M38 72 L82 72" fill="none" stroke="#2dd4bf" stroke-width="4.5" stroke-linecap="round"
+              class="innovative-a-path" style="animation-delay: 0.8s;" />
           </svg>
         </div>
-        <span class="text-xl font-display font-bold gold-teal-gradient-text">عبدالرحمن AI</span>
+        <span class="text-lg sm:text-xl font-display font-bold gold-teal-gradient-text">عبدالرحمن ناصر للتصميم</span>
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: var(--text-dim);">
@@ -264,7 +305,6 @@
       </nav>
 
       <div class="flex items-center gap-4">
-        <!-- Theme Toggle Button -->
         <button id="themeToggle"
           class="w-10 h-10 rounded-xl glass flex items-center justify-center text-gold hover:scale-110 active:scale-95 transition-all cursor-pointer shadow-md"
           title="تبديل وضع الإضاءة">
@@ -298,10 +338,10 @@
         <div
           class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass border border-gold/30 text-xs text-gold animate-bounce">
           <span class="w-2 h-2 rounded-full bg-tealAccent animate-ping"></span>
-          مطور ومصمم إحترافي • حيوي وتفاعلي
+          مصمم هويات بصرية وواجهات رقمية • إبداع بلا حدود
         </div>
-        <h1 class="text-4xl sm:text-6xl font-display font-bold leading-tight">
-          أهلاً بك، أنا <span class="gold-teal-gradient-text">عبدالرحمن AI</span>
+        <h1 class="text-4xl sm:text-6xl font-display font-bold leading-tight gold-teal-gradient-text">
+          أهلاً بك، أنا عبدالرحمن<span class="wave-emoji">👋</span>
         </h1>
         <p class="text-base sm:text-lg leading-relaxed max-w-xl" style="color: var(--text-dim);">
           أدمج دقة الهندسة مع روعة الفن لأبتكر تجارب رقمية نادرة، واجهات مستخدم مذهلة، وهويات بصرية تفوق التوقعات بروح
@@ -319,47 +359,41 @@
         </div>
       </div>
 
-      <!-- Hero Badge Display with Logo Drawing Animation -->
-      <div class="relative flex justify-center items-center reveal">
+      <!-- Hero Badge Display with Live Drawing Logo A (Without Outer Box) -->
+      <div class="relative flex flex-col justify-center items-center reveal">
         <div class="absolute w-72 h-72 bg-gold/10 rounded-full blur-3xl -top-10 -right-10 animate-pulse"></div>
         <div class="absolute w-72 h-72 bg-tealAccent/10 rounded-full blur-3xl -bottom-10 -left-10 animate-pulse"></div>
 
         <div
-          class="w-full max-w-md aspect-square rounded-[32px] glass p-8 relative flex flex-col items-center justify-center shadow-2xl border border-gold/20 group hover:border-tealAccent/50 transition-all duration-500 pulse-glow">
+          class="w-40 h-40 rounded-3xl bg-gradient-to-tr from-gold/15 via-tealAccent/15 to-gold/25 border border-gold/40 flex items-center justify-center p-4 relative mb-6 logo-float shadow-xl group-hover:scale-110 transition-transform z-10">
+          <!-- Live Drawing Logo A -->
+          <svg viewBox="0 0 120 120" class="w-full h-full overflow-visible">
+            <path d="M60 15 L95 95 L78 95 L60 52 L42 95 L25 95 Z" fill="none" stroke="url(#customAGrad)"
+              stroke-width="6" stroke-linejoin="round" stroke-linecap="round" class="innovative-a-path" />
+            <path d="M60 38 L68 55 L60 72 L52 55 Z" fill="url(#customAGrad)" opacity="0.85" />
+            <path d="M38 72 L82 72" fill="none" stroke="#2dd4bf" stroke-width="4.5" stroke-linecap="round"
+              class="innovative-a-path" style="animation-delay: 0.8s;" />
+          </svg>
+        </div>
 
-          <div
-            class="w-36 h-36 rounded-3xl bg-gradient-to-tr from-gold/15 via-tealAccent/15 to-gold/25 border border-gold/40 flex items-center justify-center p-4 relative mb-6 logo-float shadow-xl group-hover:scale-110 transition-transform">
-            <!-- Large Detailed Animated Logo SVG -->
-            <svg viewBox="0 0 100 100" class="w-full h-full overflow-visible">
-              <path d="M50 5 L58 22 L50 18 L42 22 Z" fill="url(#logoGrad)" class="animated-logo-path" />
-              <path d="M50 18 L25 78 C24 81, 28 83, 32 80 L46 50 M50 18 L75 78 C76 81, 72 83, 68 80 L54 50" fill="none"
-                stroke="url(#logoGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                class="animated-logo-path" />
-              <path d="M33 68 C45 68, 55 60, 68 60 L62 53 M68 60 L62 67" fill="none" stroke="#14b8a6" stroke-width="4.5"
-                stroke-linecap="round" stroke-linejoin="round" class="animated-logo-path" />
-            </svg>
+        <div class="text-center space-y-2 z-10">
+          <h3 class="text-xl font-display font-bold gold-teal-gradient-text">عبدالرحمن ناصر للتصميم</h3>
+          <p class="text-xs" style="color: var(--text-dim);">هوية بصرية واحترافية متكاملة</p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 w-full max-w-sm pt-6 mt-6 border-t border-gold/10 text-center z-10">
+          <div>
+            <div class="text-base font-bold text-gold">+٣</div>
+            <div class="text-[10px]" style="color: var(--text-dim);">سنوات خبرة</div>
           </div>
-
-          <div class="text-center space-y-2">
-            <h3 class="text-xl font-display font-bold gold-teal-gradient-text">التميز الرقمي والإبداع الحي</h3>
-            <p class="text-xs" style="color: var(--text-dim);">هوية بصرية واحترافية متكاملة</p>
+          <div>
+            <div class="text-base font-bold text-gold">+٥٠</div>
+            <div class="text-[10px]" style="color: var(--text-dim);">مشروع منجز</div>
           </div>
-
-          <div class="grid grid-cols-3 gap-4 w-full pt-6 mt-6 border-t border-gold/10 text-center">
-            <div>
-              <div class="text-base font-bold text-gold">+٣</div>
-              <div class="text-[10px]" style="color: var(--text-dim);">سنوات خبرة</div>
-            </div>
-            <div>
-              <div class="text-base font-bold text-gold">+٥٠</div>
-              <div class="text-[10px]" style="color: var(--text-dim);">مشروع منجز</div>
-            </div>
-            <div>
-              <div class="text-base font-bold text-tealAccent">١٠٠٪</div>
-              <div class="text-[10px]" style="color: var(--text-dim);">رضا العملاء</div>
-            </div>
+          <div>
+            <div class="text-base font-bold text-tealAccent">١٠٠٪</div>
+            <div class="text-[10px]" style="color: var(--text-dim);">رضا العملاء</div>
           </div>
-
         </div>
       </div>
     </div>
@@ -483,8 +517,6 @@
 
       <!-- Portfolio Grid -->
       <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- User's Specific Requested Project Card -->
         <div
           class="portfolio-item featured web glass rounded-2xl overflow-hidden group hover:border-gold transition-all duration-300 reveal hover:-translate-y-2">
           <div
@@ -499,7 +531,6 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
         <div
           class="portfolio-item web glass rounded-2xl overflow-hidden group hover:border-gold transition-all duration-300 reveal hover:-translate-y-2"
           style="transition-delay: 100ms;">
@@ -515,7 +546,6 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
         <div
           class="portfolio-item brand glass rounded-2xl overflow-hidden group hover:border-gold transition-all duration-300 reveal hover:-translate-y-2"
           style="transition-delay: 200ms;">
@@ -530,7 +560,6 @@
               والمطبوعات الرسمية بالكامل.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -620,19 +649,17 @@
       <a href="mailto:contact@abdulrahman.dev"
         class="hover:underline hover:scale-110 transform inline-block transition-transform">البريد الإلكتروني</a>
     </div>
-    <p>جميع حقوق النشر محفوظة © ٢٠٢٦ عبدالرحمن AI.</p>
+    <p>جميع حقوق النشر محفوظة © ٢٠٢٦ عبدالرحمن ناصر للتصميم.</p>
   </footer>
 
-  <!-- JavaScript Code for Interactivity & Theme Switcher -->
+  <!-- JavaScript Code -->
   <script>
-    // Mouse Glow Follower
     const cursorGlow = document.getElementById('cursor-glow');
     window.addEventListener('mousemove', (e) => {
       cursorGlow.style.left = e.clientX + 'px';
       cursorGlow.style.top = e.clientY + 'px';
     });
 
-    // Theme Switcher Logic (Light / Dark Mode)
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
@@ -654,14 +681,12 @@
       }
     });
 
-    // Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Scroll Reveal Animation (Intersection Observer)
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -680,7 +705,6 @@
       observer.observe(el);
     });
 
-    // Portfolio Filter Function with Animations
     function filterPortfolio(category) {
       const items = document.querySelectorAll('.portfolio-item');
       const buttons = document.querySelectorAll('.filter-btn');
@@ -709,7 +733,6 @@
       });
     }
 
-    // Formspree AJAX Submission Integration
     const form = document.getElementById("contactForm");
     const status = document.getElementById("status");
     const btn = document.getElementById("submitBtn");
